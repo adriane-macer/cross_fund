@@ -58,7 +58,7 @@ class _LogoWidgetState extends State<_LogoWidget>
     return Center(
       child: ZoomingWidget(
         animation: animation,
-        child: const FlutterLogo(),
+        child: Image.asset("assets/images/crossborder.png"),
       ),
     );
   }
@@ -68,7 +68,7 @@ class _LogoWidgetState extends State<_LogoWidget>
     super.initState();
     controller =
         AnimationController(duration: const Duration(seconds: 2), vsync: this);
-    animation = Tween<double>(begin: 280, end: 160).animate(controller);
+    animation = Tween<double>(begin: 160, end: 280).animate(controller);
     controller.forward();
   }
 
