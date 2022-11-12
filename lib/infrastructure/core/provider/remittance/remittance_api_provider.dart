@@ -18,7 +18,7 @@ class RemittanceApiProvider extends GetConnect implements IRemittanceProvider {
           "quoteCurrency": "0x7b8FBF2113f23cb6c3982e6e0f8A63590ABC3d7a",
           "originToken": "0x0Ef8760Da2236f657A835d1D69AE335Ee411fa05",
           "targetToken": "0xEe13c38351d2e064C0E92daaf82baB5bCee49543",
-          "originAmount": 10000,
+          "originAmount": amount,
           "minTargetAmount": 0,
           "swapDeadline": 9999999999
         }

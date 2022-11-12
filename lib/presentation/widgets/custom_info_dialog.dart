@@ -38,7 +38,7 @@ class CustomInfoDialog extends StatelessWidget {
               height: Get.height * .01,
             ),
             '${title ?? 'Please confirm'} '.h6,
-            if (description != null) '$description'.text,
+            if (description != null) '$description'.text.alignCenter,
             SizedBox(
               height: Get.height * .05,
             ),

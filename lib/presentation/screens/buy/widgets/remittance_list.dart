@@ -20,10 +20,18 @@ class RemittanceList extends StatelessWidget {
       child: Column(
         children: [
           ...[
-            _Currency(icon: Icons.currency_yen, value: "0.01", name: "Yen"),
-            _Currency(icon: Icons.euro, value: "0.01", name: "Euro"),
-            _Currency(icon: Icons.currency_yuan, value: "0.01", name: "Yuan"),
-            _Currency(icon: Icons.currency_pound, value: "0.01", name: "Pound")
+            _Currency(
+                icon: Icons.currency_yen,
+                value: "0.01",
+                name: "Yen",
+                symbol: "¥"),
+            _Currency(
+                icon: Icons.euro, value: "0.01", name: "Euro", symbol: "€"),
+            _Currency(
+                icon: Icons.currency_rupee,
+                value: "0.01",
+                name: "Rupee",
+                symbol: "₹"),
           ].map((e) => Card(
                 child: ListTile(
                   onTap: () async {
@@ -36,7 +44,7 @@ class RemittanceList extends StatelessWidget {
                         permanent: false);
                     await Get.dialog(RemittanceHandlerDialog(
                       iconData: e.icon,
-                      currency: e.name,
+                      currency: e.symbol,
                       onConfirm: (origin, target, amount) {},
                       onCancel: Get.back,
                     ));
@@ -61,6 +69,11 @@ class _Currency {
   final IconData icon;
   final String value;
   final String name;
+  final String symbol;
 
-  _Currency({required this.icon, required this.value, required this.name});
+  _Currency(
+      {required this.icon,
+      required this.value,
+      required this.name,
+      required this.symbol});
 }
