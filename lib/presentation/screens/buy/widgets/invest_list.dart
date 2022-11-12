@@ -22,7 +22,7 @@ class InvestList extends StatelessWidget {
                       permanent: false);
                   final result = await Get.dialog(
                     ConfirmHandlerDialog(
-                        iconData: Icons.fingerprint,
+                        iconData: Icons.payments_rounded,
                         title: "Invest to ${e.name}",
                         description: "You are about to invest ${e.name}.",
                         onConfirm: () {},
