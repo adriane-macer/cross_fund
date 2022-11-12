@@ -1,3 +1,8 @@
+import 'package:cross_fund/presentation/screens/buy/buy_screen.dart';
+import 'package:cross_fund/presentation/screens/game/game_screen.dart';
+import 'package:cross_fund/presentation/screens/home/home_screen.dart';
+import 'package:cross_fund/presentation/screens/more/more_screen.dart';
+import 'package:cross_fund/presentation/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cross_fund/application/controllers/bottom_navigator/bottom_navigator_controller.dart';
@@ -13,36 +18,36 @@ class BottomNavigator extends GetView<BottomNavigatorController> {
       icon: const Icon(
         Icons.home,
       ),
-      title: 'Dashboard',
-      widget: const DashboardScreen(),
+      title: 'Home',
+      widget: const HomeScreen(),
     ),
     _TabItem(
       icon: const Icon(
-        Icons.article_outlined,
+        Icons.shopping_cart,
       ),
-      title: 'Plans',
-      widget: PlanScreen(),
+      title: 'Buy',
+      widget: const BuyScreen(),
     ),
     _TabItem(
       icon: const Icon(
-        Icons.diamond_rounded,
+        Icons.apps_outlined,
       ),
-      title: 'Discover',
-      widget: DiscoverScreen(),
+      title: 'More',
+      widget: const MoreScreen(),
     ),
     _TabItem(
       icon: const Icon(
-        Icons.pie_chart_outline_sharp,
+        Icons.videogame_asset_outlined,
       ),
-      title: 'Usage',
-      widget: UsageScreen(),
+      title: 'Games',
+      widget: const GameScreen(),
     ),
     _TabItem(
       icon: const Icon(
-        Icons.menu,
+        Icons.account_circle_outlined,
       ),
-      title: 'Menu',
-      widget: MenuWidget(),
+      title: 'Profile',
+      widget: const ProfileScreen(),
     ),
   ];
 
