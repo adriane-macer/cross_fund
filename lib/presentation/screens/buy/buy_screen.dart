@@ -17,23 +17,17 @@ class BuyScreen extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            child: Image.asset("assets/images/header_buy.png"),
+          ),
+          Container(
             color: Colors.white,
             child: TabBar(
-              labelColor: Colors.black,
+              labelColor: Theme.of(context).primaryColor,
               indicatorColor: Theme.of(context).primaryColor,
               tabs: [
-                Tab(
-                    icon: const Icon(Icons.food_bank,
-                        color: Colors.black, size: 22.0),
-                    text: "Invest"),
-                Tab(
-                    icon: const Icon(Icons.real_estate_agent,
-                        color: Colors.black, size: 22.0),
-                    text: "Remittance"),
-                Tab(
-                    icon: const Icon(Icons.link_outlined,
-                        color: Colors.black, size: 22.0),
-                    text: "ETH-Fiat"),
+                Tab(text: "Invest"),
+                Tab(text: "Remittance"),
+                Tab(text: "ETH-Fiat"),
               ],
             ),
           ),

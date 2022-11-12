@@ -10,11 +10,19 @@ class InvestList extends StatelessWidget {
     final products = ProductService.to.list;
     return Column(
       children: [
-        ...products.map((e) => ListTile(
-              title: e.name.text,
-              leading: Image.network(e.image),
-              subtitle: e.description.text,
-            ))
+        ...products.map((e) => Card(
+          child: ListTile(
+                title: e.name.text,
+                leading: Image.network(e.image),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    e.description.text,
+                    e.attributes.first.value.toString().text
+                  ],
+                ),
+              ),
+        ))
       ],
     );
   }
