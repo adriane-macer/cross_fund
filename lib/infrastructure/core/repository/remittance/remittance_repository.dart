@@ -8,7 +8,11 @@ class RemittanceRepository extends IRemittanceRepository {
   RemittanceRepository(this.provider);
 
   @override
-  Future<void> remit({required String amount}) async {
+  Future<void> remit(
+      {required String currency,
+      required String origin,
+      required String target,
+      required String amount}) async {
     try {
       await provider.remit(amount: amount);
     } catch (e) {
