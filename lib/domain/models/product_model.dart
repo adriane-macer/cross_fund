@@ -9,9 +9,11 @@ class ProductModel {
   final String address;
   final String image;
   final String id;
+  final String description;
   final List<AttributeModel> attributes;
 
-  ProductModel(this.name, this.address, this.image, this.id, this.attributes);
+  ProductModel(this.name, this.address, this.image, this.id, this.attributes,
+      this.description);
 
   factory ProductModel.fromJson(Map<String, dynamic> json) =>
       _$ProductModelFromJson(json);

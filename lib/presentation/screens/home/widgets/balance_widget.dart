@@ -17,14 +17,17 @@ class BalanceWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       "Rewards points".text,
                       Row(
-                        children: [Icon(Icons.star), "196.24".text],
+                        children: [const Icon(Icons.star),
+                          const SizedBox(width: 4,), "196.24".text],
                       )
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -38,17 +41,21 @@ class BalanceWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       "Balance".text,
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Row(
-                        children: [Icon(Icons.language), "2000.00".text],
+                        children: [const Icon(Icons.language),
+                          const SizedBox(width: 4,),
+                          "2000.00".text],
                       )
                     ],
                   ),
-                  Icon(Icons.arrow_forward_ios)
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),

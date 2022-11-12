@@ -44,7 +44,7 @@ class FeaturedButtons extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       e.icon,
-                      e.title.text.color(Theme.of(context).primaryColor).alignCenter.size(12)
+                      e.title.text.color(Theme.of(context).primaryColor).alignCenter.size(10)
                     ],
                   ),
                 ),
