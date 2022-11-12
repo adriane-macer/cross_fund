@@ -17,6 +17,7 @@ dependencies:
   loading_animation_widget: ^1.2.0+3
   fluttertoast: ^8.1.1
   line_icons: ^2.0.1
+  flutter_launcher_icons: ^0.10.0
 
   cupertino_icons: ^1.0.5
 
