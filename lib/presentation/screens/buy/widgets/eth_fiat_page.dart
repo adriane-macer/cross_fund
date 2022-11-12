@@ -5,6 +5,9 @@ class EthFiatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Image.asset(
+      "assets/images/eth_fiat.png",
+      fit: BoxFit.fitWidth,
+    );
   }
 }
