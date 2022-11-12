@@ -1,6 +1,6 @@
-
 import 'package:cross_fund/services/auth_service.dart';
 import 'package:cross_fund/services/configs/app_config.dart';
+import 'package:cross_fund/services/data/product_service.dart';
 import 'package:get/get.dart';
 
 class ConfigDependencies extends GetxService {
@@ -17,6 +17,7 @@ class ConfigDependencies extends GetxService {
 
   /// Please initialize this on splash screen controller
   Future<void> initServices() async {
+    await Get.putAsync(() => ProductService().init());
     await authServices();
   }
 
@@ -28,5 +29,4 @@ class ConfigDependencies extends GetxService {
   Future<void> authServices() async {
     await Get.putAsync(() => AuthService().init());
   }
-
 }
