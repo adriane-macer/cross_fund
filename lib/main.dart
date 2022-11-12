@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: "Cross funds",
+        title: "Cross coins",
         initialBinding: InitialBindings(),
         debugShowCheckedModeBanner: false,
         initialRoute: Nav.splashPage,

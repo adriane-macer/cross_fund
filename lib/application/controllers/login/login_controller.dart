@@ -29,8 +29,9 @@ class LoginController extends GetxController {
     try {
       if (formKey.currentState?.saveAndValidate() ?? false) {
 
-        await Future.delayed(Duration(milliseconds: 1300));
         // TODO : Implement Code
+        await Future.delayed(Duration(milliseconds: 1300));
+        Get.offAllNamed(Routes.bottomNavigator);
         isLoading(false);
 
       }

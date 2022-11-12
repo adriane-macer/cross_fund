@@ -7,7 +7,7 @@ abstract class CustomTheme {
     primaryColor: CustomColors.primaryColor,
     appBarTheme: AppBarTheme(
         systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Color.fromARGB(255, 237, 38, 36),
+          statusBarColor: Color.fromARGB(255, 53, 186, 246),
           statusBarBrightness: Brightness.light,
         ),
         backgroundColor: Colors.white,

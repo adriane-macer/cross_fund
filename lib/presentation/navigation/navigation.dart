@@ -19,8 +19,14 @@ class Nav {
         transition: Transition.noTransition),
     GetPage(
       name: Routes.login,
-      page: () => const LoginScreen(),
+      page: () => LoginScreen(),
       binding: LoginBinding(),
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
+      name: Routes.bottomNavigator,
+      page: () => BottomNavigator(),
+      binding: BottomNavigatorBinding(),
       transition: Transition.fadeIn,
     ),
   ];
