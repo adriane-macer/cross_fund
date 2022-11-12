@@ -6,11 +6,6 @@ import 'package:cross_fund/presentation/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cross_fund/application/controllers/bottom_navigator/bottom_navigator_controller.dart';
-import 'package:cross_fund/presentation/screens/dashboard/dashboard_screen.dart';
-import 'package:cross_fund/presentation/screens/discover/discover_screen.dart';
-import 'package:cross_fund/presentation/screens/menu/menu_widget.dart';
-import 'package:cross_fund/presentation/screens/plans/plan_screen.dart';
-import 'package:cross_fund/presentation/screens/usage/usage_screen.dart';
 
 class BottomNavigator extends GetView<BottomNavigatorController> {
   final List<_TabItem> _tabItems = [
