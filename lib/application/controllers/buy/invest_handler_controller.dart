@@ -15,7 +15,7 @@ class InvestHandlerController extends IConfirmDialogHandlerController {
     dialogHandlerState(DialogHandlerState.Loading);
     update();
     // TODO (AE 12/11/2022) : Implement Code
-    await Future.delayed(const Duration(milliseconds: 1200));
+    await Future.delayed(const Duration(milliseconds: 800));
     dialogHandlerState(DialogHandlerState.Success);
     update();
   }

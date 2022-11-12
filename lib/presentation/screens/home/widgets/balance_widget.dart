@@ -51,7 +51,7 @@ class BalanceWidget extends StatelessWidget {
                       Row(
                         children: [const Icon(Icons.language),
                           const SizedBox(width: 4,),
-                          "2000.00".text],
+                          "₱ 800.00".text],
                       )
                     ],
                   ),
