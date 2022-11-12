@@ -1,3 +1,4 @@
+import 'package:cross_fund/services/data/product_service.dart';
 import 'package:flutter/material.dart';
 import 'package:textless/textless.dart';
 
@@ -6,10 +7,13 @@ class BuyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final products = ProductService.to.list;
     return Scaffold(
         appBar: AppBar(),
         body: Center(
-          child: "Buy Screen".text,
+          child: Column(
+            children: [...products.map((e) => e.name.text)],
+          ),
         ));
   }
 }

@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "name": "Tomatoes Fund",
+      "address": "Binan Laguna",
+      "description": "We intend to grow Hybrid F1 Tomatoes",
+      "image": "https://sorasystem.sirv.com/tomatoes.jpg",
+      "id": "1",
+      "attributes": [
+        {
+          "trait_type": "Investment Required",
+          "value": 0.01
+        },
+        {
+          "trait_type": "Globe Load After Period in ETH",
+          "value": 0.011
+        },
+        {
+          "trait_type": "Period",
+          "value": "6 months"
+        },
+        {
+          "trait_type": "Agent",
+          "value": "Agrabah"
+        },
+        {
+          "trait_type": "Crop",
+          "value": "Hybrid Tomatoes F1"
+        },
+        {
+          "trait_type": "Number of Beneficiaries",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "name": "Rice Fund",
+      "address": "Pampanga",
+      "description": "We intend to grow high yield rice",
+      "image": "https://sorasystem.sirv.com/wheat.jpg",
+      "id": "2",
+      "attributes": [
+        {
+          "trait_type": "Investment Amount",
+          "value": 0.10
+        },
+        {
+          "trait_type": "Globe Load After Period in ETH",
+          "value": 0.11
+        },
+        {
+          "trait_type": "Period",
+          "value": "6 months"
+        },
+        {
+          "trait_type": "Agent",
+          "value": "Cropital"
+        },
+        {
+          "trait_type": "Crop",
+          "value": "Hybrid Rice"
+        },
+        {
+          "trait_type": "Number of Beneficiaries",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "name": "Sugar Fund",
+      "address": "Negros",
+      "description": "We intend to grow sugar cane",
+      "image": "https://sorasystem.sirv.com/sugar.jpg",
+      "id": "3",
+      "attributes": [
+        {
+          "trait_type": "Investment Required",
+          "value": 0.02
+        },
+        {
+          "trait_type": "Globe Load After Period in ETH",
+          "value": 0.022
+        },
+        {
+          "trait_type": "Period",
+          "value": "6 months"
+        },
+        {
+          "trait_type": "Agent",
+          "value": "Sinag"
+        },
+        {
+          "trait_type": "Crop",
+          "value": "Raw Sugarcane"
+        },
+        {
+          "trait_type": "Number of Beneficiaries",
+          "value": 1000
+        }
+      ]
+    }
+  ]
+}
