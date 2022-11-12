@@ -1,5 +1,9 @@
 import 'package:cross_fund/application/controllers/buy/remittance_handler_controller.dart';
 import 'package:cross_fund/application/controllers/widget_controller/i_confirm_dialog_handler_controller.dart';
+import 'package:cross_fund/infrastructure/core/provider/remittance/i_remittance_provider.dart';
+import 'package:cross_fund/infrastructure/core/provider/remittance/remittance_api_provider.dart';
+import 'package:cross_fund/infrastructure/core/repository/remittance/i_remittance_repository.dart';
+import 'package:cross_fund/infrastructure/core/repository/remittance/remittance_repository.dart';
 import 'package:cross_fund/presentation/core/widgets/dialogs/confirm_handler_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,10 +24,14 @@ class RemittanceList extends StatelessWidget {
         ].map((e) => Card(
               child: ListTile(
                 onTap: () async {
+                  Get.lazyPut<IRemittanceProvider>(
+                      () => RemittanceApiProvider());
+                  Get.lazyPut<IRemittanceRepository>(
+                      () => RemittanceRepository(Get.find()));
                   Get.create<IConfirmDialogHandlerController>(
-                      () => RemittanceHandlerController(),
+                      () => RemittanceHandlerController(e.value, Get.find()),
                       permanent: false);
-                  final result = await Get.dialog(
+                  await Get.dialog(
                     ConfirmHandlerDialog(
                         iconData: Icons.payments_rounded,
                         title: "Remittance",
