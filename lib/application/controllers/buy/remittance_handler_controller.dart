@@ -18,16 +18,17 @@ class RemittanceHandlerController extends IRemittanceHandlerController {
   }
 
   @override
-  Future<void> confirm(
-      {required String currency,
-      required String origin,
-      required String target,
-      required String amount}) async {
+  Future<void> confirm({required String currency,
+    required String origin,
+    required String target,
+    required String amount}) async {
     dialogHandlerState(DialogHandlerState.Loading);
     update();
     try {
       await repository.remit(
           currency: currency, origin: origin, target: target, amount: amount);
+      successMessage =
+      "Successfully traded $origin to $target amounting to $currency$amount ";
       dialogHandlerState(DialogHandlerState.Success);
     } catch (e) {
       errorMessage = e.toString();
