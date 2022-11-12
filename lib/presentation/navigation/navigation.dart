@@ -19,7 +19,7 @@ class Nav {
         transition: Transition.noTransition),
     GetPage(
       name: Routes.login,
-      page: () => LoginScreen(),
+      page: () => const LoginScreen(),
       binding: LoginBinding(),
       transition: Transition.fadeIn,
     ),
