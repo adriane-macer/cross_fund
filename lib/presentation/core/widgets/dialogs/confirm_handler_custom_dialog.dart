@@ -1,19 +1,20 @@
 import 'package:cross_fund/application/constants/dialog_handler_state.dart';
 import 'package:cross_fund/application/controllers/widget_controller/i_confirm_dialog_handler_controller.dart';
+import 'package:cross_fund/presentation/core/widgets/dialogs/custom_action_dialog.dart';
 import 'package:cross_fund/presentation/widgets/custom_confirm_dialog.dart';
 import 'package:cross_fund/presentation/widgets/custom_info_dialog.dart';
 import 'package:cross_fund/presentation/widgets/custom_loading_dialog.dart';
+import 'package:cross_fund/presentation/widgets/custom_widget_confirm_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-class ConfirmHandlerDialog extends StatelessWidget {
-  final IconData iconData;
-  final String title;
-  final String description;
+class ConfirmHandlerCustomDialog extends StatelessWidget {
+  final Widget child;
   final Function onConfirm;
   final Function onCancel;
   final Function onClose;
+  final String? proceed;
 
   /// Generic dialog to handle the initial, loading, success and error
   ///
@@ -22,14 +23,13 @@ class ConfirmHandlerDialog extends StatelessWidget {
   ///      Get.create<IDialogHandlerController>(() =>
   ///            InvestHandlerController(),
   ///                       permanent: false);
-  const ConfirmHandlerDialog({
+  const ConfirmHandlerCustomDialog({
     Key? key,
-    required this.iconData,
-    required this.title,
-    required this.description,
+    required this.child,
     required this.onConfirm,
     required this.onCancel,
     required this.onClose,
+    this.proceed,
   }) : super(key: key);
 
   @override
@@ -50,15 +50,11 @@ class ConfirmHandlerDialog extends StatelessWidget {
 
   Widget _buildContent(
       BuildContext context, IConfirmDialogHandlerController controller) {
-    return CustomConfirmDialog(
-      iconData: iconData,
-      onConfirm: controller.confirm,
-      onCancel: () {
-        Get.back();
-      },
-      title: title,
-      description: description,
-    );
+    return CustomWidgetConfirmDialog(
+        onCancel: Get.back,
+        onConfirm: controller.confirm,
+        proceed: proceed,
+        child: child);
   }
 
   Widget _buildSuccess(
