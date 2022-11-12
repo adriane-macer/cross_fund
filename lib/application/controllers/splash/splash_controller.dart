@@ -19,6 +19,7 @@ class SplashController extends GetxController with StateMixin {
   Future handleCountDown() async {
     await ConfigDependencies.to.initServices();
     final initialPage = await configDependencies.initRoutePage();
+    await Future.delayed(const Duration(milliseconds: 1200));
     RxStatus.success();
     Get.offAllNamed(initialPage);
   }
