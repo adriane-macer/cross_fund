@@ -9,11 +9,11 @@
       "attributes": [
         {
           "trait_type": "Investment Required",
-          "value": 0.01
+          "value": 1000
         },
         {
-          "trait_type": "Globe Load After Period in ETH",
-          "value": 0.011
+          "trait_type": "Globe Load After Period in PHP",
+          "value": 1100
         },
         {
           "trait_type": "Period",
@@ -46,11 +46,11 @@
       "attributes": [
         {
           "trait_type": "Investment Amount",
-          "value": 0.10
+          "value": 850
         },
         {
-          "trait_type": "Globe Load After Period in ETH",
-          "value": 0.11
+          "trait_type": "Globe Load After Period in PHP",
+          "value": 900
         },
         {
           "trait_type": "Period",
@@ -83,11 +83,11 @@
       "attributes": [
         {
           "trait_type": "Investment Required",
-          "value": 0.02
+          "value": 420
         },
         {
-          "trait_type": "Globe Load After Period in ETH",
-          "value": 0.022
+          "trait_type": "Globe Load After Period in PHP",
+          "value": 500
         },
         {
           "trait_type": "Period",

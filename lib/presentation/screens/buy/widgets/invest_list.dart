@@ -25,7 +25,7 @@ class InvestList extends StatelessWidget {
                     onConfirm: () {},
                     onCancel: Get.back,
                     onClose: Get.back,
-                    proceed: "Buy",
+                    proceed: "Invest",
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
